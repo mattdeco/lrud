@@ -29,18 +29,19 @@ function checkForUpdate({
   focusStore,
   id,
   setNode,
-  currentNode,
+  currentNodeRef,
 }: {
   focusStore: FocusStore;
   id: Id;
   setNode: React.Dispatch<React.SetStateAction<FocusNodeType>>;
-  currentNode: Node;
+  currentNodeRef: React.MutableRefObject<Node>;
 }) {
   const state = focusStore.getState();
   const newNode = state.nodes[id] as FocusNodeType;
 
-  if (newNode && newNode !== currentNode && !newNode.isExiting) {
+  if (newNode && newNode !== currentNodeRef.current && !newNode.isExiting) {
     setNode(newNode);
+    currentNodeRef.current = newNode;
   }
 }
 
@@ -448,7 +449,7 @@ export function FocusNode(
         focusStore: store,
         id: nodeId,
         setNode,
-        currentNode: nodeRef.current,
+        currentNodeRef: nodeRef,
       })
     );
 
@@ -459,7 +460,7 @@ export function FocusNode(
       focusStore: store,
       id: nodeId,
       setNode,
-      currentNode: nodeRef.current,
+      currentNodeRef: nodeRef,
     });
 
     return () => {
