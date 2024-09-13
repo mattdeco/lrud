@@ -1,5 +1,9 @@
 # Changelog
 
+### v1.0.0 (2024/9/12)
+
+- Resolves a bug where multiple nodes could receive the focus class.
+
 ### v0.0.24 (2024/4/15)
 
 - React 18 is now accepted as a peer dependency
