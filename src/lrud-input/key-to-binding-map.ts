@@ -5,7 +5,7 @@ export const keyToBindingMap = {
   ArrowLeft: 'left',
   ArrowRight: 'right',
   Enter: 'select',
-  Escape: 'back',
+  Backspace: 'back',
 };
 
 // This maps a KeyCode num value, returned from an event, to a handler name.
@@ -15,5 +15,5 @@ export const keyCodeToBindingMap = {
   37: keyToBindingMap.ArrowLeft,
   39: keyToBindingMap.ArrowRight,
   13: keyToBindingMap.Enter,
-  8: keyToBindingMap.Escape
+  8: keyToBindingMap.Backspace
 };
