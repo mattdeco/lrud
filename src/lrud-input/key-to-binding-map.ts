@@ -15,5 +15,5 @@ export const keyCodeToBindingMap = {
   37: keyToBindingMap.ArrowLeft,
   39: keyToBindingMap.ArrowRight,
   13: keyToBindingMap.Enter,
-  27: keyToBindingMap.Escape
+  8: keyToBindingMap.Escape
 };
