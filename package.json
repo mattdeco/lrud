@@ -1,5 +1,5 @@
 {
-  "name": "@mattdeco/lrud",
+  "name": "@please/lrud",
   "version": "1.0.0",
   "description": "A React library for managing focus in TV apps.",
   "main": "dist/index.js",
